@@ -26,6 +26,7 @@ const interactionCreateHandler = {
         try {
             console.info(`Executing command ${interaction.commandName}...`);
             await command.execute(client, interaction);
+            console.info(`Command ${interaction.commandName} executed successfully!`);
         } catch (error) {
             console.error(`Command ${interaction.commandName} ran into an error:\n${error.message}`);
             interaction.reply(error.message ? `Command ${interaction.commandName} ran into an error:\n${error.message}` : "An unknown error has occurred.")
