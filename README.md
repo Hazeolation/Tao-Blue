@@ -67,7 +67,16 @@ Since this is the file that contains all of your sensitive information, it is no
   }
 }
 ```
-Fill in the placeholders with the corresponding values. You can get your Discord token and Client ID via the Discord Developer Portal. To get the server ID, enable Developer Mode on Discord, right click the desired server and select "Copy server ID".
+Fill in the placeholders with the corresponding values.  
+You can get your Discord token and Client ID via the Discord Developer Portal. To get the server ID, enable Developer Mode on Discord, right click the desired server and select "Copy server ID". To get the channel IDs, role IDs and the user IDs, right click the desired channel, role or user with Developer Mode enabled and select "Copy User ID" or "Copy Role ID".  
+![image](https://github.com/user-attachments/assets/3166495b-6d73-4967-9fe7-2b2b2dff098b)  
+![image](https://github.com/user-attachments/assets/a0ef5e4a-14b5-4b0a-b92c-e3d555868c66)  
+![image](https://github.com/user-attachments/assets/95189956-e4db-4652-bd6d-3fc4a7865302)  
+The username can be any value you'd like. It is recommended to set it to the Discord display name of the user.  
+To get the user tag, click on the user and copy the username under the user's display name.  
+![image](https://github.com/user-attachments/assets/ec2f225b-4082-4d75-8018-9d3d282c1e9c)
+
+
 > [!WARNING]  
 > For security reasons, you should NEVER push this file to your repository. Never share your Discord token! If you fear that it has been compromised, regenerate it on the Discord Developer Portal as soon as possible.
 
