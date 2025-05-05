@@ -44,10 +44,10 @@ const clientReady = {
                 }
             }
 
-            if (notSureArray.length === 0) return;
+            if (pingArray.length === 0) return;
 
             let reminderMessage = "";
-            for (let member of notSureArray.values()) {
+            for (let member of pingArray.values()) {
                 reminderMessage += `<@!${member.id}>\n`;
             }
 
