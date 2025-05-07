@@ -1,0 +1,71 @@
+# Terms of Service for Tao Blue Discord Bot
+
+Effective Date: May 7, 2025
+
+Welcome to the Tao Blue Discord Bot! By using this bot, you agree to the following terms and conditions. If you do not agree to these terms, please refrain from using the bot.
+
+---
+
+## 1. **Acceptance of Terms**
+
+By inviting or using the Tao Blue Discord Bot in your Discord server, you acknowledge that you have read, understood, and agree to be bound by these Terms of Service.
+
+---
+
+## 2. **Bot Usage**
+
+The Tao Blue Discord Bot is provided as-is to enhance your Discord server with features such as team coordination, automation, and other utilities. You agree to use the bot responsibly and in compliance with Discord's [Terms of Service](https://discord.com/terms) and [Community Guidelines](https://discord.com/guidelines).
+
+---
+
+## 3. **Data Collection**
+
+The Tao Blue Discord Bot may collect and store the following data:
+
+-   User IDs, server IDs, and channel IDs for functionality purposes (e.g., command execution, role management).
+-   Message content for specific commands (e.g., `/cleanup`, `/tournament`).
+
+**Data Retention**: Any data collected is stored temporarily and is not shared with third parties. Data is deleted when no longer needed for the bot's functionality.
+
+**Privacy**: By using the bot, you consent to the collection and temporary storage of this data. For more information, refer to the [Privacy Policy](PRIVACY_POLICY.md).
+
+---
+
+## 4. **Prohibited Activities**
+
+You agree not to:
+
+-   Use the bot for illegal activities or to violate Discord's Terms of Service.
+-   Exploit, abuse, or reverse-engineer the bot.
+-   Use the bot to spam, harass, or harm other users.
+
+---
+
+## 5. **Limitation of Liability**
+
+The Tao Blue Discord Bot is provided "as is" without any warranties or guarantees. The developers are not responsible for:
+
+-   Any damages, data loss, or issues caused by the bot.
+-   Misuse of the bot by users or server administrators.
+
+---
+
+## 6. **Termination**
+
+The developers reserve the right to terminate or restrict access to the bot at any time, for any reason, without prior notice.
+
+---
+
+## 7. **Changes to Terms**
+
+These Terms of Service may be updated from time to time. Continued use of the bot after changes are made constitutes acceptance of the updated terms.
+
+---
+
+## 8. **Contact**
+
+If you have any questions or concerns about these Terms of Service, please contact the developers via the [GitHub repository](https://github.com/Hazeolation/Tao-Blue/issues).
+
+---
+
+By using the Tao Blue Discord Bot, you agree to these Terms of Service. Thank you for using the bot!
