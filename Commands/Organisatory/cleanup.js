@@ -38,7 +38,7 @@ const prepareChannel = async (channel) => {
     await channel.bulkDelete(50, false);
 
     // Get the following Monday's date in UTC and set the time to 00:00:00, then convert to Unix timestamp
-    let unix = moment().utc().isoWeekday(8).startOf('day').unix()
+    let unix = moment().utc().isoWeekday(8).startOf('day').unix() + 3600 * 12; // 12:00 UTC
     let message = await channel.send(`Monday, <t:${unix}:D>`);
     await message.react('✅');
     await message.react('❔');
