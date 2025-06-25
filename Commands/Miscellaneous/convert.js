@@ -37,7 +37,7 @@ const convertTimeCommand = {
                 .setMaxValue(59))
         .addStringOption(option => 
             option.setName('timezone')
-                .setDescription('The timezone to use for the conversion. Defaults to server timezone (Europe/Berlin) if not specified.')
+                .setDescription('The timezone to use for the conversion. Defaults to Europe/Berlin if not specified.')
                 .addChoices(
                     { name: 'Coordinated Universal Time (UTC)', value: '0' },
                     { name: 'Greenwich Mean Time (GMT)', value: '0' },
