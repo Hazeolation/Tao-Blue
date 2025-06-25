@@ -93,14 +93,16 @@ const convertTimeCommand = {
 
         // Adjust date for timezone offset if provided
         if (timezoneOffset) date.setTime(date.getTime() + timezoneOffset);
-        let dateString = Intl.DateTimeFormat({ language: 'ja-JP'}, {
+        let formatter = new Intl.DateTimeFormat({ language: 'ja-JP'}, {
             month: 'long',
             day: '2-digit',
             year: 'numeric',
             hour: '2-digit',
             minute: '2-digit',
             second: '2-digit'
-        })
+        });
+        let dateString = formatter.format(date);
+        
         // Get timestamp
         let timestamp = Math.floor(date.getTime() / 1000)
 
