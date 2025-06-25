@@ -5,35 +5,35 @@ const convertTimeCommand = {
     data: new SlashCommandBuilder()
         .setName("convert")
         .setDescription("Converts a given time to a Unix timestamp.")
-        .addNumberOption(option =>
+        .addIntegerOption(option =>
             option.setName('year')
-                .setDescription('The year of the date to convert (e.g., 2023). Leave blank for current year.'))
-                .setMinValue(1970) // Unix epoch starts from 1970
-        .addNumberOption(option => 
+                .setDescription('The year of the date to convert (e.g., 2023). Leave blank for current year.')
+                .setMinValue(1970)) // Unix epoch starts from 1970
+        .addIntegerOption(option => 
             option.setName('month')
-                .setDescription('The month of the date to convert (1-12). Leave blank for current month.'))
+                .setDescription('The month of the date to convert (1-12). Leave blank for current month.')
                 .setMinValue(1)
-                .setMaxValue(12)
-        .addNumberOption(option => 
+                .setMaxValue(12))
+        .addIntegerOption(option => 
             option.setName('day')
-                .setDescription('The day of the date to convert (1-31). Leave blank for current day.'))
+                .setDescription('The day of the date to convert (1-31). Leave blank for current day.')
                 .setMinValue(1)
-                .setMaxValue(31)
-        .addNumberOption(option => 
+                .setMaxValue(31))
+        .addIntegerOption(option => 
             option.setName('hour')
-                .setDescription('The hour of the time to convert (0-23). Leave blank for current hour.'))
+                .setDescription('The hour of the time to convert (0-23). Leave blank for current hour.')
                 .setMinValue(0)
-                .setMaxValue(23)
-        .addNumberOption(option => 
+                .setMaxValue(23))
+        .addIntegerOption(option => 
             option.setName('minute')
-                .setDescription('The minute of the time to convert (0-59). Leave blank for current minute.'))
+                .setDescription('The minute of the time to convert (0-59). Leave blank for current minute.')
                 .setMinValue(0)
-                .setMaxValue(59)
-        .addNumberOption(option => 
+                .setMaxValue(59))
+        .addIntegerOption(option => 
             option.setName('second')
-                .setDescription('The second of the time to convert (0-59). Leave blank for current second.'))
+                .setDescription('The second of the time to convert (0-59). Leave blank for current second.')
                 .setMinValue(0)
-                .setMaxValue(59),
+                .setMaxValue(59)),
     /**
      * Executes the convert command.
      * @param {Client} client 
