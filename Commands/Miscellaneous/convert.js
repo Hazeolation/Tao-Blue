@@ -8,21 +8,32 @@ const convertTimeCommand = {
         .addNumberOption(option =>
             option.setName('year')
                 .setDescription('The year of the date to convert (e.g., 2023). Leave blank for current year.'))
+                .setMinValue(1970) // Unix epoch starts from 1970
         .addNumberOption(option => 
             option.setName('month')
-            .setDescription('The month of the date to convert (1-12). Leave blank for current month.'))
+                .setDescription('The month of the date to convert (1-12). Leave blank for current month.'))
+                .setMinValue(1)
+                .setMaxValue(12)
         .addNumberOption(option => 
             option.setName('day')
                 .setDescription('The day of the date to convert (1-31). Leave blank for current day.'))
+                .setMinValue(1)
+                .setMaxValue(31)
         .addNumberOption(option => 
             option.setName('hour')
                 .setDescription('The hour of the time to convert (0-23). Leave blank for current hour.'))
+                .setMinValue(0)
+                .setMaxValue(23)
         .addNumberOption(option => 
             option.setName('minute')
                 .setDescription('The minute of the time to convert (0-59). Leave blank for current minute.'))
+                .setMinValue(0)
+                .setMaxValue(59)
         .addNumberOption(option => 
             option.setName('second')
-                .setDescription('The second of the time to convert (0-59). Leave blank for current second.')),
+                .setDescription('The second of the time to convert (0-59). Leave blank for current second.'))
+                .setMinValue(0)
+                .setMaxValue(59),
     /**
      * Executes the convert command.
      * @param {Client} client 
@@ -33,22 +44,21 @@ const convertTimeCommand = {
         let date = new Date();
 
         // Fetech possible user inputs
-        const jahr = interaction.options.getNumber('year');
-        const monat = interaction.options.getNumber('month');
-        const tag = interaction.options.getNumber('day');
-        const stunde = interaction.options.getNumber('hour');
+        const year = interaction.options.getNumber('year');
+        const month = interaction.options.getNumber('month');
+        const day = interaction.options.getNumber('day');
+        const hour = interaction.options.getNumber('hour');
         const minute = interaction.options.getNumber('minute');
-        const sekunde = interaction.options.getNumber('second');
+        const second = interaction.options.getNumber('second');
 
         // Adjust date with given values
-        if (jahr == undefined) date.setFullYear(jahr);
-        if (monat == undefined) date.setMonth(monat - 1);
-        if (tag == undefined) date.setDate(tag);
-        if (stunde == undefined) date.setHours(stunde);
-        if (minute == undefined) date.setMinutes(minute);
-        if (sekunde == undefined) date.setSeconds(sekunde);
+        if (year) date.setFullYear(year);
+        if (month || month === 0) date.setMonth(month - 1);
+        if (day) date.setDate(day);
+        if (hour || hour === 0) date.setHours(hour);
+        if (minute || minute === 0) date.setMinutes(minute);
+        if (second || second === 0) date.setSeconds(second);
 
-        console.info(date.toString());
         // Get timestamp
         let timestamp = Math.floor(date.getTime() / 1000)
 
