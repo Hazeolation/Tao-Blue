@@ -93,14 +93,21 @@ const convertTimeCommand = {
 
         // Adjust date for timezone offset if provided
         if (timezoneOffset) date.setTime(date.getTime() + timezoneOffset);
-
+        let dateString = Intl.DateTimeFormat({ language: 'ja-JP'}, {
+            month: 'long',
+            day: '2-digit',
+            year: 'numeric',
+            hour: '2-digit',
+            minute: '2-digit',
+            second: '2-digit'
+        })
         // Get timestamp
         let timestamp = Math.floor(date.getTime() / 1000)
 
         // Response embed
         let embed = new EmbedBuilder()
             .setTitle("Here's your Unix timestamp!")
-            .setDescription(`Converted ${date.toDateString()} to ${timestamp}\n` +
+            .setDescription(`Converted ${dateString} UTC${timezoneOffset < 0 ? '-' : '+'}${timezoneOffset / 3600000} to ${timestamp}\n` +
                         	`Date  [<t:${timestamp}>]: \\<t:${timestamp}>\n` +
                             `Full date (Modifier F) [<t:${timestamp}:F>]: \\<t:${timestamp}:F>\n` +
                             `Short time format (Modifier t) [<t:${timestamp}:t>]: \\<t:${timestamp}:t>\n` +
