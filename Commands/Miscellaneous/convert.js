@@ -11,9 +11,10 @@ const convertTimeCommand = {
                 .setMinValue(1970)) // Unix epoch starts from 1970
         .addIntegerOption(option => 
             option.setName('month')
-                .setDescription('The month of the date to convert (1-12). Leave blank for current month.'))
+                .setDescription('The month of the date to convert (1-12). Leave blank for current month.')
                 .setMinValue(1)
-                .setMaxValue(12)
+
+                .setMaxValue(12))
         .addIntegerOption(option => 
             option.setName('day')
                 .setDescription('The day of the date to convert (1-31). Leave blank for current day.')
