@@ -41,12 +41,12 @@ const convertTimeCommand = {
         const sekunde = interaction.options.getNumber('second');
 
         // Adjust date with given values
-        if (jahr) date.setFullYear(jahr);
-        if (monat) date.setMonth(monat - 1);
-        if (tag) date.setDate(tag);
-        if (stunde) date.setHours(stunde);
-        if (minute) date.setMinutes(minute);
-        if (sekunde) date.setSeconds(sekunde);
+        if (jahr == undefined) date.setFullYear(jahr);
+        if (monat == undefined) date.setMonth(monat - 1);
+        if (tag == undefined) date.setDate(tag);
+        if (stunde == undefined) date.setHours(stunde);
+        if (minute == undefined) date.setMinutes(minute);
+        if (sekunde == undefined) date.setSeconds(sekunde);
 
         console.info(date.toString());
         // Get timestamp
