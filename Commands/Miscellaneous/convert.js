@@ -93,7 +93,7 @@ const convertTimeCommand = {
 
         // Adjust date for timezone offset if provided
         if (timezoneOffset) date.setTime(date.getTime() + timezoneOffset);
-        let formatter = new Intl.DateTimeFormat({ language: 'en-US'}, {
+        let formatter = new Intl.DateTimeFormat('en-US', {
             month: 'long',
             day: '2-digit',
             year: 'numeric',
