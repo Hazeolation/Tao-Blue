@@ -72,16 +72,18 @@ const convertTimeCommand = {
      */
     async execute(client, interaction) {
         // Date to adjust as needed
-        let date = new Date(Date.now());
+        let now = new Date();
 
         // Fetech possible user inputs
-        const year = interaction.options.getInteger('year');
-        const month = interaction.options.getInteger('month');
-        const day = interaction.options.getInteger('day');
-        const hour = interaction.options.getInteger('hour');
-        const minute = interaction.options.getInteger('minute');
-        const second = interaction.options.getInteger('second');
+        const year = interaction.options.getInteger('year') ?? now.getUTCFullYear();
+        const month = (interaction.options.getInteger('month') ?? (now.getUTCMonth() + 1)) - 1;
+        const day = interaction.options.getInteger('day') ?? now.getUTCDate();
+        const hour = interaction.options.getInteger('hour') ?? now.getUTCHours();
+        const minute = interaction.options.getInteger('minute') ?? now.getUTCMinutes();
+        const second = interaction.options.getInteger('second') ?? now.getUTCSeconds();
         const timezoneOffset = parseInt(interaction.options.getString('timezone'));
+
+        let date = new Date(Date.UTC(year, month - 1, day, hour, minute, second));
 
         // Adjust date with given values
         if (year) date.setFullYear(year);
