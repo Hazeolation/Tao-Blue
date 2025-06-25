@@ -45,12 +45,12 @@ const convertTimeCommand = {
         let date = new Date();
 
         // Fetech possible user inputs
-        const year = interaction.options.getNumber('year');
-        const month = interaction.options.getNumber('month');
-        const day = interaction.options.getNumber('day');
-        const hour = interaction.options.getNumber('hour');
-        const minute = interaction.options.getNumber('minute');
-        const second = interaction.options.getNumber('second');
+        const year = interaction.options.getInteger('year');
+        const month = interaction.options.getInteger('month');
+        const day = interaction.options.getInteger('day');
+        const hour = interaction.options.getInteger('hour');
+        const minute = interaction.options.getInteger('minute');
+        const second = interaction.options.getInteger('second');
 
         // Adjust date with given values
         if (year) date.setFullYear(year);
