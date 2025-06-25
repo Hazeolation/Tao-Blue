@@ -100,7 +100,7 @@ const convertTimeCommand = {
         // Response embed
         let embed = new EmbedBuilder()
             .setTitle("Here's your Unix timestamp!")
-            .setDescription(`Converted ${date.toString('yyyy-MM-dd hh:mm:ss')} to ${timestamp}\n` +
+            .setDescription(`Converted ${date.toDateString()} to ${timestamp}\n` +
                         	`Date  [<t:${timestamp}>]: \\<t:${timestamp}>\n` +
                             `Full date (Modifier F) [<t:${timestamp}:F>]: \\<t:${timestamp}:F>\n` +
                             `Short time format (Modifier t) [<t:${timestamp}:t>]: \\<t:${timestamp}:t>\n` +
